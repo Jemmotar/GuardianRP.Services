@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.Api.Server", "GuardianRP.Api\GuardianRP.Api.Server.csproj", "{765BC61D-D7FD-4327-AD39-02113E2868E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.Api.Server", "GuardianRP.Api.Server\GuardianRP.Api.Server.csproj", "{765BC61D-D7FD-4327-AD39-02113E2868E1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.Api.Client", "GuardianRP.Api.Client\GuardianRP.Api.Client.csproj", "{7DFB2A4D-89D0-4097-9CA3-5A7ED015D3B2}"
 EndProject
