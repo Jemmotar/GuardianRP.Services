@@ -1,10 +1,11 @@
-﻿using System;
+﻿using GuardianRP.Api.Server.Networking;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GuardianRP.Api {
+namespace GuardianRP.Api.Server {
 
     class Api {
 

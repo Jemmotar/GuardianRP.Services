@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiClient.cs" />
+    <Compile Include="Networking\Event\SocketClientEventArgs.cs" />
+    <Compile Include="Networking\SocketClient.cs" />
+    <Compile Include="Networking\Event\SocketMessageEventArgs.cs" />
+    <Compile Include="Networking\Event\SocketStateEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
