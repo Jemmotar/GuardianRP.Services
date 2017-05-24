@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.Services", "GuardianRP.Api.Server\GuardianRP.Services.csproj", "{765BC61D-D7FD-4327-AD39-02113E2868E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.Services", "GuardianRP.Services\GuardianRP.Services.csproj", "{765BC61D-D7FD-4327-AD39-02113E2868E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.Service.SocketClient", "GuardianRP.Api.Client\GuardianRP.Service.SocketClient.csproj", "{7DFB2A4D-89D0-4097-9CA3-5A7ED015D3B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.Service.SocketClient", "GuardianRP.Service.SocketClient\GuardianRP.Service.SocketClient.csproj", "{7DFB2A4D-89D0-4097-9CA3-5A7ED015D3B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardianRP.Service.SocketServer", "GuardianRP.Service.SocketServer\GuardianRP.Service.SocketServer.csproj", "{C4388057-8D31-414E-94B2-531AC7661A00}"
 EndProject
