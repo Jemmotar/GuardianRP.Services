@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using GuardianRP.Service.SocketClient.Event;
 
-namespace GuardianRP.Service.SocketServer {
+namespace GuardianRP.Services.Tcp {
 
-    public class TcpSocketServer : TcpListener {
+    public class TcpSocketService : TcpListener {
 
         private readonly    List<Client>                        _clients = new List<Client>();
 
@@ -19,7 +19,7 @@ namespace GuardianRP.Service.SocketServer {
 
         public  event       EventHandler<SocketClientEventArgs> OnClientConnected = delegate { };
 
-        public TcpSocketServer(int port) : base(IPAddress.Any, port) {
+        public TcpSocketService(int port) : base(IPAddress.Any, port) {
             Port = port;
             Clients = _clients.AsReadOnly();
         }

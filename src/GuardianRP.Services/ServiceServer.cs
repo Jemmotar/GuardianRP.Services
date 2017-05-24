@@ -3,19 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GuardianRP.Service.SocketServer;
+using GuardianRP.Services.Tcp;
+using GuardianRP.Services.Web;
 
 namespace GuardianRP.Services {
 
     class ServiceServer {
 
-        public static readonly TcpSocketServer Server = new TcpSocketServer(25567);
+        public static Configuration Config = Configuration.Instance;
+
+        public static readonly TcpSocketService TcpService = new TcpSocketService(Config.ScoketPort);
+        public static readonly WebService       WebService = new WebService(Config.WebDirectory, Config.WebPort);
 
         static void Main(string[] args) {
-            Server.Start();
-            
+            TcpService.Start();
+            WebService.Start();
+
             while(true) {
-                Server.Broadcast(Console.ReadLine());
+                TcpService.Broadcast(Console.ReadLine());
             }
         }
 
