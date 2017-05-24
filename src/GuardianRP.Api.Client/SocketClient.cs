@@ -1,4 +1,4 @@
-﻿using GuardianRP.Api.Client.Networking.Event;
+﻿using GuardianRP.Service.SocketClient.Event;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,21 +7,18 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GuardianRP.Api.Client.Networking {
+namespace GuardianRP.Service.SocketClient {
 
     public class SocketClient {
 
         public readonly     string  Ip;
         public readonly     int     Port;
 
-        public bool Connected
-        {
-            get
-            {
+        public bool Connected {
+            get {
                 return _connected;
             }
-            set
-            {
+            set {
                 if(_connected != value) {
                     _connected = value;
                     OnConnectionStateChanged(this, new SocketStateEventArgs(_socket, value));

@@ -5,7 +5,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GuardianRP.Api.Client.Networking.Event {
+namespace GuardianRP.Service.SocketClient.Event {
 
     public class SocketMessageEventArgs : EventArgs {
 

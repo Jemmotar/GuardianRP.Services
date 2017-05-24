@@ -1,6 +1,4 @@
-﻿using GuardianRP.Api.Client.Networking;
-using GuardianRP.Api.Client.Networking.Event;
-using GuardianRP.Api.Server;
+﻿using Client = GuardianRP.Service.SocketClient.SocketClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,19 +6,20 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using GuardianRP.Service.SocketClient.Event;
 
-namespace GuardianRP.Api.Server.Networking {
+namespace GuardianRP.Service.SocketServer {
 
-    internal class TcpServer : TcpListener {
+    public class TcpSocketServer : TcpListener {
 
-        private readonly    List<SocketClient>                  _clients = new List<SocketClient>();
+        private readonly    List<Client>                        _clients = new List<Client>();
 
         public  readonly    int                                 Port;      
-        public  readonly    IReadOnlyList<SocketClient>         Clients;
+        public  readonly    IReadOnlyList<Client>               Clients;
 
         public  event       EventHandler<SocketClientEventArgs> OnClientConnected = delegate { };
 
-        public TcpServer(int port) : base(IPAddress.Any, port) {
+        public TcpSocketServer(int port) : base(IPAddress.Any, port) {
             Port = port;
             Clients = _clients.AsReadOnly();
         }
@@ -38,7 +37,7 @@ namespace GuardianRP.Api.Server.Networking {
 
         private void OnClientAccepted(IAsyncResult result) {
             Socket socket = EndAcceptSocket(result);
-            SocketClient client = new SocketClient(socket);
+            Client client = new Client(socket);
             client.Start();
             _clients.Add(client);
 
@@ -63,7 +62,7 @@ namespace GuardianRP.Api.Server.Networking {
 
         public void Broadcast(string message) {
             byte[] payload = Encoding.UTF8.GetBytes(message);
-            foreach(SocketClient client in Clients)
+            foreach(Client client in Clients)
                 client.Send(payload);
         }
 

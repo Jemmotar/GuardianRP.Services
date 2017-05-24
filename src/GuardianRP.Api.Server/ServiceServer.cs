@@ -1,15 +1,15 @@
-﻿using GuardianRP.Api.Server.Networking;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GuardianRP.Service.SocketServer;
 
-namespace GuardianRP.Api.Server {
+namespace GuardianRP.Services {
 
-    class Api {
+    class ServiceServer {
 
-        public static readonly TcpServer Server = new TcpServer(25567);
+        public static readonly TcpSocketServer Server = new TcpSocketServer(25567);
 
         static void Main(string[] args) {
             Server.Start();

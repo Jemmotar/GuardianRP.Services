@@ -43,18 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api.cs" />
+    <Compile Include="ServiceServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Networking\TcpServer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\GuardianRP.Api.Client\GuardianRP.Api.Client.csproj">
+    <ProjectReference Include="..\GuardianRP.Api.Client\GuardianRP.Service.SocketClient.csproj">
       <Project>{7DFB2A4D-89D0-4097-9CA3-5A7ED015D3B2}</Project>
-      <Name>GuardianRP.Api.Client</Name>
+      <Name>GuardianRP.Service.SocketClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GuardianRP.Service.SocketServer\GuardianRP.Service.SocketServer.csproj">
+      <Project>{c4388057-8d31-414e-94b2-531ac7661a00}</Project>
+      <Name>GuardianRP.Service.SocketServer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
