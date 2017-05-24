@@ -7,8 +7,8 @@
     <ProjectGuid>{765BC61D-D7FD-4327-AD39-02113E2868E1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GuardianRP.Api.Server</RootNamespace>
-    <AssemblyName>GuardianRP.Api.Server</AssemblyName>
+    <RootNamespace>GuardianRP.Services</RootNamespace>
+    <AssemblyName>GuardianRP.Services</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
